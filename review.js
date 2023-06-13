@@ -274,3 +274,7 @@
 // componentDidUpdate() => component update bo'lgandan keyin yuradi
 // componentWillUnmount() => componentni tugashi, ya'ni clean up bo'lishi
 // useEffect( () => ) => renderdan keyin yuradi, render qachon bo'ladi qachonki state o'zgarsa
+
+// ========================================================================
+// ========================================================================
+
