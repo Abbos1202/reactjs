@@ -75,3 +75,36 @@
 
 // What is render method ? 
 // Render browserda code larni ko'rsatib berish uchun ishlatilinadi va 1 - si ma'lumot, 2 - si manzil yani document.getElementById('root')
+
+// ========================================================================
+// ========================================================================
+
+// lesson 2
+
+// component
+// jsx
+// props
+// children props
+
+
+// export => 2 xil usuli bor --> 1-si export default App ; 2-si export { App }
+
+// export default App => Bunda faqat bitta function bo'lishi kerak, xohlagan nom bilan import olsa bo'ladi
+// export { App, App2 } => Bunda bir nechta function bo'lsa, gulli qavs ichida export qilinadi va o'sha export qilingan nom bilan import qilib olish kerak
+
+// jsx (JavaScript XML) => JavaScript syntax extension JavaScript ichida html code yoki html ichida JavaScript code ni ishlatishimiz
+
+// component => independent, reusable code lar jamlanmasi va har bir component html code qayrardi
+// component based => xohlagan joyda xohlagancha chaqirib ishlatishimiz mumkin. Shuning uchun component based deyiladi
+
+// import React from './react' => Bu package.json dagi React ni barcha qismlarini o'z ichiga oladi
+
+// React.Component => package.json dagi React da component degan xususiyati bor va bu xususiyatlarini o'zlashtirib oladi
+
+// props => properties, component lar orasida communication hisoblanadi. Component da bir-biriga data jo'natish va parent dan child ga ma'lumot jo'natadi
+// props => ma'lumotlarni dynamic qilib beradi va object ga teng
+
+// children props => parent da <Child /> qilib emas <Child></Child> yani ochiluvchi yopiluvchi qilib ichiga ma'lumot yozib, Child da {props.children} deb chaqirish kerak
+
+
+// Component => functonal va class componentlar bor va har bir component html code qaytaradi
