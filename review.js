@@ -108,3 +108,57 @@
 
 
 // Component => functonal va class componentlar bor va har bir component html code qaytaradi
+
+// ========================================================================
+// ========================================================================
+
+
+// lesson 3
+
+// state 
+// setState()
+
+// state => Built in Object hisoblanadi va component haqida ma'lumot (data) saqlaydi ya'ni Navbar.jsx ni datalarini saqlaydi 
+// State o'zgarganda ya'ni component dagi ma'lumot o'zgarganda component ni re-render qiib beradi, ya'ni qaytadan yurgazib beradi va o'zgargan joyni o'zini ko'rsatadi
+// State qachon o'zgaradi ? => qachonki user action lar bo'lsa ya'ni button input lar
+
+// setState() => o'zgarishlarni control qiladi, har safar o'zgarganda browser ni re-render qilib beradi  va componentni re-render qilib beradi, function ga teng
+
+
+// class component => state ga ega component hisoblanadi va Reactni yaralishi class componentda
+// functional component => stateless, state ga ega bo'lmagan component hisoblanadi
+
+// onChange => input lar bilan ishlaganda va bunda e.target.value keladi.
+// e (event) => default parametr
+
+
+// Misol uchun =>
+// const getValue = (e)=> {
+//     // console.log(event.target.value);
+//     this.setState({title: e.target.value})
+//   }
+
+// onClick => button lar bilan ishlaganda ishlaydi bunda misol uchun va user action bajarish uchun function nomi kiritiladi va render() pastida biz o'sha function ni yozishimiz mumkin => count: this.state.count + 1 keladi
+
+// Misol uchun =>
+// const oshirish = () => {
+//     this.setState({count: this.state.count + 1})
+//   }
+
+
+// select => bunda ham e.target.value keladi
+
+// input type="checkbox" va "radio" => bunda e.target.checked keladi va true, false chiqadi
+
+
+// input yoki button da  ham callback function orqali setState qilsa bo'ladi
+
+
+// Misol uchun =>
+
+//  <button onClick={()=> this.setState({count: this.state.count + 1})}>+</button>
+//  <h1>{this.state.count}</h1> 
+//  <button onClick={()=> this.setState({count: this.state.count - 1})}>-</button>
+
+//  <h2>{this.state.title}</h2> 
+//  <input onChange={(e)=> this.setState({ title: e.target.value })} type="text" placeholder="title" />  
