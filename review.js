@@ -198,3 +198,48 @@
 //     </div>
 // )
 
+// ========================================================================
+// ========================================================================
+
+
+// lesson 5
+
+// CRUD OPERATION => CREATE READ UPDATE DELETE
+
+
+// ========================================================================
+// ========================================================================
+
+// lesson 6
+
+// styled components
+
+// ---npm install styled-components@latest
+// ---Extensions => vscode-styled-components
+// ---import styled from 'styled-components';
+// ---export
+// ---ThemeProvider
+// ---lightMode
+// ---darkMode
+
+// npm install styled-components@latest => Bu papkaga styled components o'rnatib beradi
+// Extensions => vscode-styled-components => Bu styled components da css code yozsak suggest qilib beradi
+
+
+// import styled from 'styled-components'; => Bu JavaScript faylda css code yozish uchun
+
+
+// export => styled components da 3 ta turi mavjud -->
+// 1 - si => export const Button = styled.button`` va import qilishda ===> import {Button} from './style.js' bo'ladi
+// 2 - si => const Container = styled.div``... --> pastidan hamma funksiya export qilinadi ===> export {Container, H1, Paragraph, Button} va import qilishda ===> import {Container, H1, Paragraph, Button} from './style.js' bo'ladi
+// 3 - si => const Container = styled.div``...Container.Paragraph = styled.p``.....--> pastdan ===> export {Container} va import qilishda ==> import {Container} from './style.js' va child larini oldiga --> Container.H1 bo'ladi
+
+// ThemeProvider => -lightMode va darkMode yaratib beradi bu asosan index.js ga beriladi va App ni o'rab qoyish kerak
+// Mana bu ko'rinishda
+
+//  <ThemeProvider theme={darkMode}>
+//  <App/>
+// </ThemeProvider> 
+
+// ========================================================================
+// ========================================================================
