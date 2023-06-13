@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600;700&family=Special+Elite&family=Yatra+One&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
 
 
@@ -9,7 +9,7 @@
 }
 
 body {
-  text-align: center;
-  font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
+  background-color: blue;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
 }
