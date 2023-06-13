@@ -399,3 +399,44 @@
 //     </Context>
 //   </React.StrictMode>
 // );
+
+
+// lifting state up => bir nechta sibling childlarga har biriga alohida state yozmasdan parentdan turib props orqali ularga tasir qilish
+
+// state => object hisoblanadi, componentni datasini saqlaydi va browserni re-render qilib beradi. Agar bir oddiy o'zgaruvchi bilan qiymat bersak re-render qilib bermaydi
+// setState() => function state ni boshqattan yurgazib beradi va o'zgargan joyni o'zini ko'rsatadi
+
+// prop =>  properties, component lar orasida communication hisoblanadi. Component da bir-biriga data jo'natish va parent dan child ga ma'lumot jo'natadi
+// children prop => component ni ichiga ma'lumot yozishga imkoniyat beradi, juft tag. React dan keladi
+
+// state vs prop => 
+// props =>  faqat read only, o'zgarmas,ma'lumotlarni bir componentdan boshqa componentlarga argument sifatida o'tkazish imkonini beradi. Props ga child component orqali kirish mumkin, Props componentlar orasidagi communication uchun ishlatiladi,  Stateless componentda props bolishi mumkin props componentlarni reusable qilib beradi
+// state => bunda asynchronous xususiyati bor, o'zgaruvchan, state componentlar haqida malumotga ega state ga child component orqali kirish mumkin emas, State component bilan dinamik o'zgarishlarni ko'rsatish uchun ishlatilishi mumkin.
+// prop drilling => optimization ga ta'sir qiladi va react oddiy javascript browseriga oxshab qoladi bir parentda misol uchun 3 ta sibling child bo'lsa va ularni ham child lari bo'lsa ularga birin ketin prop yuborish parentdan sibling child ga undan child ga,
+
+// context API (Global data) => state menegement hisoblanadi. Prop drilling ni oldini olib beradi, Context fayl yaratib olib uni eng katta orab turuvchi index.js dagi App componentni orab qoyib xohlagan childda ishlatishimiz mumkin, buning uchun reactdan useContext keladi va context fayldagi createContext qilgan function nomini import qilib olishimiz kerak, 
+
+// ======================================================
+// ======================================================
+
+// lesson 11
+
+// You tube clone
+// lifting state up => parentdan childga prop orqali data ni jonatish 
+// search movies
+// delete movies
+
+// 12 - dars
+
+// ---useReducer(hook)
+// ---CRUD
+
+// useReducer() => murakkab logiklarni state managmentda useState o'rniga ishlatishimiz mumkin yani useState ni mukammalroq varianti
+// useReducer => logiklarini componentdan tashqarida olib chiqib ketish xususiyati bor
+// useReducer => complex state management uchun useState o'rniga useReducer ishlatish good practice hisoblanadi
+// useReducer() => reducer function va  stateni qabul qiladi
+// Contex API bilan useReducer qo'shilsa redux ni ornini bosadi
+// dispatch => setStatega o'xshaydi, hamda functionni typeni saqlaydi
+// reducer function => 2 ta qiymat oladi , birinchisi state, ikkinchisi action
+// state => initial qiymat
+// action => dispatchdan kelgan malumotni tutib olamiz
