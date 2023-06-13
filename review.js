@@ -243,3 +243,18 @@
 
 // ========================================================================
 // ========================================================================
+
+// lesson 7
+
+// ---React LIFECYCLE Methods
+// ---React key(map)
+// ---React useState(hook)
+// ---key(index)
+
+// key(index) =>
+// 1-si ==> data ni id si yo'q bo'lsa, ya'ni unique keyi yo'q bo'lsa beriladi
+// 2-si ==> data da id bo'lsa va bitta ma'lumotni o'chirib tashlasak, browserni re-render ya'ni re-create qiladi va indexi o'zgarib ketadi. Agar id bersak ma'lumotni o'chirsak ham re-create bo'lmaydi
+// 3-si ==> Agar ma'lumot static bo'lsa yani read only bo'lsa, faqat browserga ma'lumot chiqsa va create, update, delete bo'lmasa index beriladi. Agar CRUD bo'lsa id beriladi
+
+// React useState(hook) => React dan keladi va function ni statefull qilib beradi React ni 16-verasiyasida qo'shilgan
+// useState() => usestate({}) object va useState([]) array dan foydalanishimiz mumkin
