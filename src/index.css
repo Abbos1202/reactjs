@@ -1,16 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600;700&family=Special+Elite&family=Yatra+One&display=swap');
+
+
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: #f6f5f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: "Montserrat", sans-serif;
-  height: 100vh;
-  margin: -20px 0 50px;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
 }

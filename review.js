@@ -283,3 +283,119 @@
 // conditional rendering
 
 // conditional rendering => shart asosida browserda o'zgarishlarni contrl qilish
+
+// =========================================================================
+// =========================================================================
+
+// lesson 10
+
+// ---useEffect => beckenddan ma'lumot olib kelganda ishlatamiz va fetch then orqali malumotrlarni olib kelamiz
+// Misol uchun => 
+
+// import React, {useState, useEffect} from 'react';
+
+// const FetchingData = () => {
+
+//     const [data, setData] = useState([]);
+//     const [id, setId] = useState(1)
+
+//     useEffect(() => {
+//         fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+//         .then((res) => res.json())
+//         .then((response) => {
+//             // console.log(response);
+//             setData(response);
+//         });
+//     }, [id])
+
+//   return (
+//     <div>
+//         <input type="text" value={id} onChange={(e) => setId(e.target.value)} />
+//         <h5>{data.title}</h5>
+//         {/* {
+//             data.map((post) => {
+//                 return(
+//                     <h4 key={post.id}>{post.id}</h4>
+//                 )
+//             })
+//         } */}
+//     </div>
+//   )
+// }
+
+// export default FetchingData;
+
+// -------------------->
+
+// Conditional rendering => shart asosida ekrandagi malumotni o'zgartirish
+
+// Misol uchun => 
+
+// const LoginControl = () => {
+//     const [isLoggedIn, setIsLoggedIn] = useState(true);
+  
+//     const handleSignIn = () => {
+//       setIsLoggedIn(false);
+//     };
+  
+//     const handleSignUp = () => {
+//       setIsLoggedIn(true);
+//     };
+  
+//     return (
+//       <div>
+//         <h1>LoggedForm Component</h1>
+//         {isLoggedIn ? (
+//           <SignIn click={handleSignIn} />
+//         ) : (
+//           <SignUp click={handleSignUp} />
+//         )}
+//       </div>
+//     );
+//   };
+
+// --------------------------------->
+
+// ---Context API => Birinchi navbatda bitta js fayl yasab olishimiz kerak va unda React dan useState, createContext keladi 
+// Misol uchun =>
+// import React, {createContext, useState} from "react";
+
+// export const UserContext = createContext();
+
+// export const Context = ({children}) => {
+//     const [name, setName] = useState('Abbosbek');
+
+//     return (
+//         <UserContext.Provider value={[name]}>
+//             {children}
+//         </UserContext.Provider>
+//     )
+// }
+
+// UserContext => bunda value jo'natib xohlagan child da tutib olishimiz mumkin
+
+// ---------------------------->
+
+// Provider => taminlovchi degani
+
+// ----------------------------------->
+
+// children => eng katta orab turuvchi faylni ya'ni index.js dagi App ni o'rab qo'yishimiz kerak Context bilan ya'ni o'sha Context API yasagan faylimiz bilan
+
+// Misol uchun => 
+
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import App from './App';
+// import "./index.css";
+// import { Context } from './components/ContextAPI/context';
+
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <Context>
+//       <App />
+//     </Context>
+//   </React.StrictMode>
+// );
