@@ -162,3 +162,38 @@
 
 //  <h2>{this.state.title}</h2> 
 //  <input onChange={(e)=> this.setState({ title: e.target.value })} type="text" placeholder="title" />  
+
+
+// ========================================================================
+// ========================================================================
+
+// lesson 4
+
+// function call
+// multi state change
+// student list => filter
+
+// ()=>  => calback function yurib ketishini oldini oladi
+
+
+// Misol uchun =>
+
+// <input onChange={()=> nameChange ('test')} type="text" placeholder="name" />
+// Bunda ()=> nameChange ('test') ni yurishdan to'xtatib turibdi va onChange yursa keyin nameChange function yuradi qachonki inputga ma'lumot yozilsa
+
+
+// Bir xil function name bilan dynamic access qilib ikkalasiga alohida ma'lumot kiritish  =>
+
+// render()
+
+// const multiFunction = (e) => {
+//     this.setState({ [e.target.name]: e.target.value })
+// };
+
+// return (
+//     <div>
+//         <input name="name" onChange={multiFunction} type="text" placeholder="name" />
+//         <input name="status" onChange={multiFunction} type="text" placeholder="status" />
+
+//     </div>
+// )

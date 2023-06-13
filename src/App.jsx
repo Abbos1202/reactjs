@@ -1,109 +1,47 @@
 import React, { Component } from "react";
+import { users } from "./mock.js";
 
-export default class extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
-      title: "",
+      dataList: users,
     };
   }
 
   render() {
-    // console.log('render');
+    const onSelect = (e) => {
+      this.setState({ search: e.target.value });
+    };
 
-    // const getValue = (e) => {
-    //   // console.log(event.target.value);
-    //   this.setState({ title: e.target.value });
-    // };
-
-    // const onSelect = (e) => {
-    //   console.log(e.target.value);
-    // };
-
-    // const onChecking = (e) => {
-    //   console.log(e.target.checked);
-    // };
-
-    // const onRadio = (e) => {
-    //   console.log(e.target.checked);
-    // };
+    const onSearch = (e) => {
+      const { value } = e.target;
+      let filtered = users.filter((item) =>
+        `${item[this.state.search]}`.toLowerCase().includes(value.toLowerCase())
+      );
+      this.setState({
+        dataList: filtered,
+      });
+    };
 
     return (
       <div>
-        <button onClick={()=> this.setState({count: this.state.count + 1})}>+</button>
-        <h1>{this.state.count}</h1>
-        <button onClick={()=> this.setState({count: this.state.count - 1})}>-</button>
-
-        <h2>{this.state.title}</h2>
-        <input onChange={(e)=> this.setState({ title: e.target.value })} type="text" placeholder="title" />
-        {/* <input onChange={getValue} type="text" placeholder="title" /> */}
-        {/* <select onChange={onSelect}>
-          <option value="uzb">uzb</option>
-          <option value="rus">rus</option>
-          <option value="usa">usa</option>
-        </select>
-        <input onChange={onChecking} type="checkbox" />
-        <input onChange={onRadio} type="radio" /> */}
+          <select onChange={onSelect} name="" id="">
+            <option value="id">ID</option>
+            <option value="name">NAME</option>
+            <option value="status">STATUS</option>
+          </select>
+          <input onChange={onSearch} type="text" placeholder="search..." />
+          {this.state.dataList.map(({ id, name, status }) => {
+            return (
+              <div key={id}>
+                <h2>
+                  {id} {name} {status}
+                </h2>
+              </div>
+            );
+          })}
       </div>
     );
   }
 }
-
-// import React, { Component } from 'react'
-
-// export default class App extends Component {
-
-//   constructor(props){
-//     super(props);
-//     this.state = {
-//       count: 0
-//     }
-//   }
-
-//   // state = {  => conflig ga sabab bo'ladi
-//   //   count: 0
-//   // }
-
-// render() {
-
-// const oshirish = () => {
-//   // this.state.count < 15 ? this.setstate({count: this.state.count + 1}) : this.setState({count: this.state.count})
-//   // this.state.count < 15 && this.setState({count: this.state.count + 1})
-//   // if(this.state.count < 15) {
-//   //   this.setState({count: this.state.count + 1})
-//   // }
-//   if(this.state.count < 15) this.setState({count: this.state.count + 1});
-// };
-
-// const kamaytirish = () => {
-//   // this.state.count > 0 ? this.setstate({count: this.state.count - 1}) : this.setState({count: this.state.count})
-//   // this.state.count > 0 && this.setState({count: this.state.count - 1})
-//   // if(this.state.count > 0) {
-//   //   this.setState({count: this.state.count - 1})
-//   // }
-//   if(this.state.count < 0) this.setState({count: this.state.count - 1});
-// }
-
-//     return (
-//       <div>
-//         <button onClick={oshirish}>+</button>
-//         <h2>{this.state.count}</h2>
-//         <button onClick={kamaytirish}>-</button>
-//       </div>
-//     )
-//   }
-// }
-
-// import React from 'react'
-// import Navbar from './components/Navbar'
-// import Footer from './components/Footer'
-
-// export default function App() {
-//   return (
-//     <div>
-//       <Navbar />
-//       <Footer />
-//     </div>
-//   )
-// }
