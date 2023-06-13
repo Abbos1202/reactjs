@@ -278,3 +278,8 @@
 // ========================================================================
 // ========================================================================
 
+// lesson 9
+
+// conditional rendering
+
+// conditional rendering => shart asosida browserda o'zgarishlarni contrl qilish
