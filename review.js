@@ -258,3 +258,19 @@
 
 // React useState(hook) => React dan keladi va function ni statefull qilib beradi React ni 16-verasiyasida qo'shilgan
 // useState() => usestate({}) object va useState([]) array dan foydalanishimiz mumkin
+
+
+// ========================================================================
+// ========================================================================
+
+// lesson 8
+
+// lifting state up
+// useEffect hook 
+
+// lifting state up => stateni yuqoriga ko'tarish ma'nosida keladi, 2 yoki 3 childni bitta parentda ularga prop jonatish orqali child dagi codelarni ishlatishimiz mumkin
+// useEffect hook  => componentDidMount(), componentDidUpdate(), componentWillUnmount() larni o'z ichiga oladi
+// componentDidMount() => render birinchi yurganidan keyin yuradi, render yurgandan keyin qanaqadir holat o'zgarishini xohlasak ishlatamiz
+// componentDidUpdate() => component update bo'lgandan keyin yuradi
+// componentWillUnmount() => componentni tugashi, ya'ni clean up bo'lishi
+// useEffect( () => ) => renderdan keyin yuradi, render qachon bo'ladi qachonki state o'zgarsa
