@@ -1,14 +1,12 @@
-import React from 'react';
-import Counter from './Counter';
-import Child from './Child';
+import React from 'react'
+import CRUD from './CRUD/CRUD'
 
 const App = () => {
   return (
     <div>
-      <Counter />
-      <Child />
+      <CRUD />
     </div>
   )
 }
 
-export default App;
+export default App
