@@ -426,7 +426,11 @@
 // search movies
 // delete movies
 
-// 12 - dars
+
+// ======================================================
+// ======================================================
+
+//  lesson 12
 
 // ---useReducer(hook)
 // ---CRUD
@@ -440,3 +444,11 @@
 // reducer function => 2 ta qiymat oladi , birinchisi state, ikkinchisi action
 // state => initial qiymat
 // action => dispatchdan kelgan malumotni tutib olamiz
+
+
+// ======================================================
+// ======================================================
+
+// lesson 13
+
+// contect + useReducer = redux
