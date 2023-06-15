@@ -1,17 +1,18 @@
 import React, {useContext} from 'react';
 import { InfoContext } from './context';
+import { ADDNUM, ADDONE, ADDTEN, GETVALUE } from './reducer/types';
 
 const Child = () => {
-    const {addOne, addTen, changeName, addNum} = useContext(InfoContext)
+    const [state, dispatch] = useContext(InfoContext)
 
 
   return (
     <div>
-        <button onClick={addOne} >addOne</button>
-        <button onClick={addTen} >addTen</button>
+        <button onClick={() => dispatch({type: ADDONE})} >addOne</button>
+        <button onClick={() => dispatch({type: ADDTEN})} >addTen</button>
         <br />
-        <input onChange={(e) => changeName(e)} type="text" placeholder='addNum' />
-        <button onClick={addNum}>addNum</button>
+        <input onChange={(e) => dispatch({type: GETVALUE, payload: e.target.value})} type="text" placeholder='addNum' />
+        <button onClick={() => dispatch({type: ADDNUM})}>addNum</button>
     </div>
   )
 }

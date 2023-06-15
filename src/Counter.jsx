@@ -2,10 +2,10 @@ import React, {useContext} from 'react';
 import { InfoContext } from './context';
 
 const Counter = () => {
-    const {count} = useContext(InfoContext)
+    const [state] = useContext(InfoContext)
   return (
     <div>
-        {count}
+        {state.count}
         <hr />
     </div>
   )

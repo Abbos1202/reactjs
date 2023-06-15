@@ -1,30 +1,18 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useReducer } from "react";
+import { reducer } from "./reducer/reducer";
+
 
 export const InfoContext = createContext();
 
 const GlobalContext = ({ children }) => {
-
-    const [count, setCount] = useState(0);
-    const [name, setName] = useState('');
-
-    const addOne = () => {
-        setCount(count + 1)
-    }
-
-    const addTen = () => {
-        setCount(count + 10)
-    }
-
-    const changeName = (e) => {
-        setName(e.target.value)
-    }
-
-    const addNum = () => {
-        setCount(count + +name)
-    }
+ 
+    const [state, dispatch] = useReducer(reducer, {
+        count: 0,
+        name: ''
+    })
 
     return (
-        <InfoContext.Provider value={{ count, setCount, addOne, addTen, name, changeName, addNum }}>
+        <InfoContext.Provider value={[state, dispatch]}>
             {children}
         </InfoContext.Provider>
     )
