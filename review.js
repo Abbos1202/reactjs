@@ -465,4 +465,30 @@
 // localStorage.removeItem(name);
 // localStorage.clear();
 
-// react-router-dom 5
+// react-router-dom 5 => React single page application edi, react-router-dom multi page application qilib beradi
+// BrowserRouter => react-router-dom dan keladi Context ga o'xshaydi
+// NavLink va Link => sahifani ustiga bosganimizda boshqa bir page ga o'tishini control qiladi
+// Router => ma'lum bir sahifaga kelganda body da qanaqa ma'lumot chiqarib berishi control qiladi
+// Switch => url larni control qiladi
+
+// NavLink => active style xususiyati bor
+// Link => active style xususiyati yo'q
+
+// exact => aniq degani agar '/' bo'lsa ham active bo'lib qolmaydi qachon ustiga bosamiz keyin active bo'ladi
+// exact => '/' berilsa ham componentni control qiladi
+
+// path={'*'} => bunda link nomi xato yozilsa error berish uchun
+// Switch => error berilganda ishlaydi
+
+// Misol uchun
+
+{/* <Switch>
+<Route path={"/"} component={Home} exact />
+<Route path={"/home"} component={Home} />
+<Route path={"/about"} component={About} />
+<Route path={"/projects"} component={Projects} />
+<Route path={"/contacts"} component={Contacts} />
+<Route path={"*"}>
+  <h1>404 Not Found</h1>
+</Route>
+</Switch> */}
