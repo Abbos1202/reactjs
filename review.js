@@ -452,3 +452,17 @@
 // lesson 13
 
 // contect + useReducer = redux
+
+
+// ======================================================
+// ======================================================
+
+// localStorage => browser hotirasida malum bir vaqt qoladi yani browserdagi hotira. Misol uchun online magazinlardagi malumot.
+// localStorage => malumotlarni userni browseriga client browseriga saqlab boradi
+
+// localStorage.setItem(name, value);
+// localStorage.getItem(name);
+// localStorage.removeItem(name);
+// localStorage.clear();
+
+// react-router-dom 5
