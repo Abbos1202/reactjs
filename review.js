@@ -333,15 +333,15 @@
 
 // const LoginControl = () => {
 //     const [isLoggedIn, setIsLoggedIn] = useState(true);
-  
+
 //     const handleSignIn = () => {
 //       setIsLoggedIn(false);
 //     };
-  
+
 //     const handleSignUp = () => {
 //       setIsLoggedIn(true);
 //     };
-  
+
 //     return (
 //       <div>
 //         <h1>LoggedForm Component</h1>
@@ -449,13 +449,15 @@
 // ======================================================
 // ======================================================
 
-// lesson 13
+// lesson 13 14
 
 // contect + useReducer = redux
 
 
 // ======================================================
 // ======================================================
+
+// lesson 15
 
 // localStorage => browser hotirasida malum bir vaqt qoladi yani browserdagi hotira. Misol uchun online magazinlardagi malumot.
 // localStorage => malumotlarni userni browseriga client browseriga saqlab boradi
@@ -492,3 +494,55 @@
   <h1>404 Not Found</h1>
 </Route>
 </Switch> */}
+
+
+// ===========================================================
+// ===========================================================
+
+// lesson 16 
+
+// optimization
+
+// memo() => memorization xotiralash degani va har doim child componentda keladi va hech qanday o'zgarish bo'lmasa yoki statenki prop qilib jo'natmasak beramiz
+// Agar parentdan childga stateni prop qilib jo'natsak re-render bo'ladi
+// Agar oddiy oz'garuvchini prop qilib jo'natsak re-render bo'lmaydi
+// Agar object yoki arrayni prop qilib jo'natsak re-render bo'ladi va buni oldini olish uchun useMemo() kerak bo'ladi va parentda ishlaydi
+// useMemo(() => {},[]) => faqat parent componentda keladi va object arrayda childga prop qilib jonatsak child re-render bo'lmaydi
+// useMemo => useEffect ga o'xshaydi va static qiymat jo'nata olamiz
+
+// const student = useMemo(() => {
+//   return {name: "Firdavs"}
+// }, [])
+
+{/* <h3>Student: {student.name}</h3> */ }
+
+// useCalback(() => {}, []) => useMemo ga o'xshaydi va bitta farqi bor props ni tutib olganda Function ko'rinishida chaqiriladi av parent da keladi va qiymatni ozgartirsa boladi
+
+// const studentCall = useCallback(() => {
+//   return {name: "Firdavs"}
+// }, [])
+
+{/* <h3>Student: {studentCall().name}</h3> */ }
+
+// useRef => inputni qiymatini js dom orqali olishga yordam beradi va re-render bo'lmaydi
+
+// useRef => object qaytadi va value sini olish uchun current.value dan foydalanamiz
+
+// const name = useRef("");
+
+{/* <button
+  onClick={() => {
+    alert(name.current, value);
+    console.log(name);
+  }}
+>
+  Clicked
+</button>  */}
+
+
+// fetch vs axios
+
+// fetch => javascript da bor va http request jo'natish uchun
+// axios => alohida kutubxona
+
+// axios vs fetch => axios ni fetch dan 3 ta farqi bor. 1 chisi avtomatik json ga parse qiladi, 2 chisi data.data deb malumotni set qilishimiz kerak. Chunki data ni ichida array keladi. 3 chisi axios.get/delete/post/put yozishimiz kerak
